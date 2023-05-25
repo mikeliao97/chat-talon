@@ -33,10 +33,11 @@
 }
 
 .navlinks {
-  width: 20rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 60px; /* Adjust the value to increase or decrease the margin between elements */
+
 }
 
 .apptitle {

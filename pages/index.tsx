@@ -6,6 +6,8 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import CircularProgress from '@mui/material/CircularProgress';
 import { fetchEventSource } from '@microsoft/fetch-event-source';
+import { MendableSearchBar } from '@mendable/search'
+
 
 type Message = {
   type: "apiMessage" | "userMessage";
@@ -123,23 +125,33 @@ export default function Home() {
       </Head>
       <div className={styles.topnav}>
         <div className = {styles.navlogo}>
-          <Link href="/">LangChain</Link>
+          <Link href="/">Talon Search</Link>
         </div>
         <div className = {styles.navlinks}>
           <a
-            href="https://langchain.readthedocs.io/en/latest/"
+            href="https://talon.wiki/unofficial_talon_docs/"
             target="_blank"
             rel="noreferrer"
           >
-            Docs
+            Unofficial documentation
           </a>
           <a
-            href="https://github.com/zahidkhawaja/langchain-chat-nextjs"
+            href="https://github.com/knausj85/knausj_talon"
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            knausj_talon
           </a>
+          <a
+            href="https://search.talonvoice.com/search/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Talon voice search repository
+          </a>
+          <MendableSearchBar placeholder = {"Alternative Search from Mendable.ai"} 
+          anon_key={"11a122e1-80f2-4b80-b46a-a6a340867d44"} />
+        
         </div>
       </div>
       <main className={styles.main}>
